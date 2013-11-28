@@ -11,8 +11,9 @@ I created this pastebin to show that CRUD in mongodb is simple, that pastebins a
 
 Requirements
 ------------
-This package uses python 2.7.X
+This package was made for python 2.7.X
 We run it on windows, we've also run it on Ubuntu.
+A MongoDB Server v2.2.1 or above
 
 Installing the Pastebin
 -----------------------
@@ -20,3 +21,5 @@ Installing the Pastebin
 2. Rename example_app.cfg to app.cfg
 3. Change the settings in app.cfg to match your environment
 4. `python flaskpaste.py`
+
+If you're going for a fresh install on Linux bootstrap.sh may end up doing all this for you (No promises).
