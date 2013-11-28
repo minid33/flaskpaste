@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FlaskPaste</title>
+    <!-- Le styles -->
+    <script type='text/javascript' src="{{ url_for('static', filename='bootstrap3/js/bootstrap.js') }}"></script>
+    <link href="{{ url_for('static', filename='bootstrap3/css/bootstrap.css') }}" rel=stylesheet media="screen"/>
+
+    <script type='text/javascript' src="{{ url_for('static', filename='prism.js') }}"></script>
+    <link href="{{ url_for('static', filename='prism.css') }}" rel=stylesheet media="screen"/>
+    <style type="text/css">
+        .container-narrow {
+            margin: 0 auto;
+            max-width: 700px;
+        }
+        .container-narrow > hr {
+            margin: 30px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container-narrow">
+
+    <div class="masthead">
+        <h3 class="text-muted">FlaskPaste</h3>
+    </div>
+
+    <hr>
+    <form action="/store_paste" method="post">
+        {%  block codeout %}
+        {% endblock %}
+
+        <h2>Code goes here</h2>
+        <textarea rows="10" cols="113" name="code"></textarea>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <h4>Paste Language</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        {%  block language %}
+                        {% endblock %}
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <button class="btn btn-primary" type="submit">Store it</button></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </form>
+    <hr>
+
+    <div class="footer">
+        <p>Made by Team Large Racks... because have you tried to install a php pastebin?</p>
+    </div>
+
+</div>
+
+</body>
+</html>
